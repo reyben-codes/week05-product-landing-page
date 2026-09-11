@@ -69,31 +69,7 @@
 
         <x-product-showcase />
 
-        <section id="pricing" class="border-y border-zinc-300 bg-zinc-50 py-16">
-            <div class="mx-auto max-w-6xl px-6">
-                <p class="text-sm uppercase">Pricing prototype</p>
-                <h2 class="mt-2 text-3xl font-bold">Choose your service</h2>
-                <p class="mt-3 text-zinc-600">Placeholder packages for the initial wireframe; final pricing should be confirmed with the business.</p>
-                <div class="mt-8 grid gap-5 md:grid-cols-3">
-                    @foreach ([
-                        ['Fresh Cut', 'Price on inquiry', ['Consultation', 'Haircut', 'Basic styling']],
-                        ['Cut + Detail', 'Price on inquiry', ['Consultation', 'Haircut', 'Detail finishing']],
-                        ['Full Refresh', 'Price on inquiry', ['Consultation', 'Haircut', 'Complete styling']],
-                    ] as [$plan, $price, $items])
-                        <article class="border border-zinc-400 bg-white p-6">
-                            <h3 class="text-xl font-bold">{{ $plan }}</h3>
-                            <p class="mt-4 text-2xl">{{ $price }}</p>
-                            <ul class="my-6 space-y-2 text-sm text-zinc-600">
-                                @foreach ($items as $item)
-                                    <li>— {{ $item }}</li>
-                                @endforeach
-                            </ul>
-                            <a href="#contact" class="block border border-zinc-900 px-4 py-3 text-center">Inquire</a>
-                        </article>
-                    @endforeach
-                </div>
-            </div>
-        </section>
+        <x-pricing-section />
 
         <section id="testimonials" class="mx-auto max-w-6xl px-6 py-16">
             <p class="text-sm uppercase">Testimonials</p>
