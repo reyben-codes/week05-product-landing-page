@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A responsive landing page prototype for NIK NOOK Barbers Elbi in Los Baños.">
+    <meta name="description" content="Explore haircut options, customer feedback, and direct inquiries for NIK NOOK Barbers Elbi in Los Baños.">
+    <meta name="theme-color" content="#111313">
+    <link rel="icon" href="{{ asset('images/nik-nook-favicon.png') }}" type="image/png">
+    <link rel="apple-touch-icon" href="{{ asset('images/nik-nook-favicon.png') }}">
     <title>@yield('title', 'NIK NOOK Barbers Elbi')</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
