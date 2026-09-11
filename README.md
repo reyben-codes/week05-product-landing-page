@@ -1,66 +1,180 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# NIK NOOK Barbers Elbi — Responsive Product Landing Page
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+A modern, responsive landing page created for **NIK NOOK Barbers Elbi**, a local barbershop serving the Los Baños community. The project transforms the business information available through its [Facebook page](https://www.facebook.com/profile.php?id=100063595255719) into a focused customer journey for discovering services, reviewing customer feedback, and contacting the shop.
 
-## About Laravel
+This is **Mini Project 04** for Week 5 and was built individually with Laravel, Blade components, Tailwind CSS, JavaScript, and Vite.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Project Objectives
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- Present a real local business through a professional landing-page experience.
+- Build a clear content flow from service discovery to direct inquiry.
+- Create reusable Blade components instead of repeating interface markup.
+- Use Tailwind CSS utilities for responsive layouts and visual consistency.
+- Support desktop, laptop, tablet, and mobile screen sizes.
+- Provide accessible navigation, visible focus states, semantic sections, and descriptive image alternatives.
+- Preserve content accuracy by directing visitors to the shop for current services, rates, and availability.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Landing Page Sections
 
-## Learning Laravel
+The page contains all required sections:
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+1. Responsive navigation with logo, page links, Sign In, and Get Started actions
+2. Hero section with headline, description, primary and secondary calls to action, and an inquiry mockup
+3. Six service-feature cards
+4. Desktop and mobile product showcase
+5. Three service-plan pricing cards
+6. Three genuine customer testimonials
+7. Final conversion call-to-action
+8. Footer with company information, quick links, social link, location, and copyright
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## Responsive Design
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+The interface follows a mobile-first approach. Tailwind breakpoints reorganize the same semantic page rather than loading separate mobile content.
 
-## Laravel Sponsors
+| View | Responsive behavior |
+| --- | --- |
+| Mobile | Collapsible navigation, single-column sections, full-width actions, and stacked cards |
+| Tablet | Expanded typography, two-column card layouts where space permits, and a larger product preview |
+| Laptop/Desktop | Full navigation, multi-column layouts, side-by-side hero content, and three-column card grids |
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+Flexible widths, responsive spacing, CSS grid, flexbox, wrapping controls, and scalable typography prevent horizontal scrolling and keep content readable across supported devices.
 
-### Premium Partners
+## Tailwind CSS Implementation
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+The project uses Tailwind CSS v4 through Vite. Its utility classes handle:
 
-## Contributing
+- Responsive grid and flex layouts
+- Breakpoint-specific spacing and typography
+- Brand colors and reusable theme values
+- Rounded cards, borders, shadows, and decorative backgrounds
+- Hover, focus-visible, and transition states
+- Reduced-motion support and smooth in-page navigation
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Project theme values are defined in `resources/css/app.css`, including the teal, coral, cream, paper, and ink color palette used throughout the page.
 
-## Code of Conduct
+## Blade Components
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Reusable Blade components keep each section focused and maintainable:
 
-## Security Vulnerabilities
+| Component | Responsibility |
+| --- | --- |
+| `navbar.blade.php` | Desktop and mobile navigation |
+| `hero.blade.php` | Main message, actions, and inquiry preview |
+| `feature-card.blade.php` | Reusable feature presentation |
+| `product-showcase.blade.php` | Desktop/mobile service-discovery mockups |
+| `pricing-card.blade.php` | Reusable service-plan card |
+| `pricing-section.blade.php` | Pricing data and responsive plan grid |
+| `testimonial-card.blade.php` | Reusable customer review card |
+| `testimonials-section.blade.php` | Testimonial data and section layout |
+| `cta-section.blade.php` | Final customer inquiry path |
+| `footer.blade.php` | Company details, links, and social connection |
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+The page view at `resources/views/pages/home.blade.php` composes these sections inside `resources/views/layouts/app.blade.php`.
 
-## License
+## UI Design
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+The visual direction was inspired by classic barbershop contrast while retaining the turquoise color associated with the existing NIK NOOK logo. The interface combines:
+
+- High-contrast black and off-white surfaces
+- Teal as the main action and brand color
+- Coral accents inspired by traditional barber poles
+- Heavy display typography for strong section hierarchy
+- Rounded cards and soft shadows for a modern, approachable appearance
+- Original interface mockups that explain the customer inquiry journey
+
+Prices and availability are intentionally not invented. Visitors are asked to confirm current information directly with the shop through Facebook.
+
+## Project Structure
+
+```text
+week05-product-landing-page/
+├── documentation/
+│   ├── design-comparison.md
+│   ├── before-design.png
+│   └── screenshots/
+├── public/
+│   └── images/
+│       ├── testimonials/
+│       ├── nik-nook-favicon.png
+│       └── nik-nook-logo.jpg
+├── resources/
+│   ├── css/app.css
+│   ├── js/app.js
+│   └── views/
+│       ├── components/
+│       ├── layouts/app.blade.php
+│       └── pages/home.blade.php
+├── routes/web.php
+└── tests/Feature/LandingPageTest.php
+```
+
+## Screenshots
+
+### Before and After
+
+| Initial wireframe | Final design |
+| --- | --- |
+| ![Initial low-fidelity landing-page wireframe](documentation/screenshots/before-design.png) | ![Final NIK NOOK landing-page design](documentation/screenshots/after-design.png) |
+
+The before image is a low-fidelity wireframe created for this project from the business information available online. It is not presented as an earlier website owned by NIK NOOK. See the full [design comparison](documentation/design-comparison.md).
+
+### Responsive Views
+
+| Desktop | Tablet | Mobile |
+| --- | --- | --- |
+| [View desktop screenshot](documentation/screenshots/after-desktop.png) | [View tablet screenshot](documentation/screenshots/after-tablet.png) | [View mobile screenshot](documentation/screenshots/after-mobile.png) |
+
+### Page Sections
+
+- [Navigation on mobile](documentation/screenshots/navigation-mobile.png)
+- [Hero section](documentation/screenshots/hero.png)
+- [Features section](documentation/screenshots/features.png)
+- [Product showcase](documentation/screenshots/showcase.png)
+- [Pricing section](documentation/screenshots/pricing.png)
+- [Testimonials section](documentation/screenshots/testimonials.png)
+- [Footer](documentation/screenshots/footer.png)
+
+### Development Evidence
+
+- [VS Code project structure](documentation/screenshots/vscode-project-structure.png)
+- [Blade component folders](documentation/screenshots/blade-components.png)
+- [Public GitHub repository](documentation/screenshots/github-repository.png)
+
+## Local Setup
+
+### Requirements
+
+- PHP 8.2 or later
+- Composer
+- Node.js and npm
+
+### Installation
+
+```bash
+git clone https://github.com/reyben-codes/week05-product-landing-page.git
+cd week05-product-landing-page
+composer install
+php -r "file_exists('.env') || copy('.env.example', '.env');"
+php artisan key:generate
+npm install
+npm run build
+php artisan serve
+```
+
+Open `http://127.0.0.1:8000` in a browser.
+
+This static landing page does not require application database records. Its displayed content is maintained through Blade component data.
+
+## Testing
+
+Run the automated feature checks with:
+
+```bash
+php artisan test
+```
+
+The tests verify the required section order, navigation and calls to action, official business link, absence of placeholder links, and all three customer testimonials.
+
+## Content and Usage Note
+
+This website was created for educational purposes. NIK NOOK Barbers Elbi and its logo belong to their respective owner. Customer names, feedback, and supplied portrait images should only remain in the public repository with their permission.
