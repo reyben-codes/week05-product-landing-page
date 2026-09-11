@@ -94,6 +94,7 @@ week05-product-landing-page/
 │   ├── before-design.png
 │   ├── before-wireframe-original.png
 │   └── screenshots/
+│       └── linkedin-post.png
 ├── public/
 │   └── images/
 │       ├── testimonials/
@@ -141,6 +142,7 @@ The before image is a medium-fidelity concept developed from the project's [orig
 - [VS Code project structure](documentation/screenshots/vscode-project-structure.png)
 - [Blade component folders](documentation/screenshots/blade-components.png)
 - [Public GitHub repository](documentation/screenshots/github-repository.png)
+- [Published LinkedIn project showcase](documentation/screenshots/linkedin-post.png)
 
 ## Local Setup
 
