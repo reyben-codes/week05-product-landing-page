@@ -7,6 +7,41 @@
 @source "../**/*.vue";
 
 @theme {
-    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-        'Segoe UI Symbol', 'Noto Color Emoji';
+    --font-sans: 'Aptos', 'Segoe UI', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+    --font-display: 'Arial Narrow', 'Roboto Condensed', 'Segoe UI', sans-serif;
+
+    --color-brand-teal: #2db7bf;
+    --color-brand-teal-dark: #087c83;
+    --color-brand-ink: #111313;
+    --color-brand-cream: #f7f4ec;
+    --color-brand-paper: #fffdf8;
+    --color-brand-coral: #ed6a5a;
+
+    --shadow-soft: 0 18px 50px -24px rgb(17 19 19 / 0.28);
+}
+
+@layer base {
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        min-width: 320px;
+    }
+
+    ::selection {
+        background: var(--color-brand-teal);
+        color: var(--color-brand-ink);
+    }
+
+    :focus-visible {
+        outline: 3px solid var(--color-brand-coral);
+        outline-offset: 3px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
 }

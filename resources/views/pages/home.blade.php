@@ -3,23 +3,9 @@
 @section('title', 'NIK NOOK Barbers Elbi | Landing Page Prototype')
 
 @section('content')
-    <header class="border-b border-zinc-300">
-        <nav class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-6 py-5" aria-label="Main navigation">
-            <a href="#home" class="font-bold">NIK NOOK</a>
+    <x-navbar />
 
-            <div class="flex flex-wrap items-center gap-4 text-sm">
-                <a href="#home">Home</a>
-                <a href="#features">Features</a>
-                <a href="#pricing">Pricing</a>
-                <a href="#testimonials">Testimonials</a>
-                <a href="#contact">Contact</a>
-                <a href="#contact" class="border border-zinc-400 px-3 py-2">Sign In</a>
-                <a href="#pricing" class="border border-zinc-900 px-3 py-2">Get Started</a>
-            </div>
-        </nav>
-    </header>
-
-    <main>
+    <main id="main-content">
         <section id="home" class="mx-auto grid max-w-6xl gap-8 px-6 py-16 md:grid-cols-2 md:items-center">
             <div>
                 <p class="mb-3 text-sm uppercase">NIK NOOK Barbers Elbi</p>

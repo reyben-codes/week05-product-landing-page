@@ -7,7 +7,10 @@
     <title>@yield('title', 'NIK NOOK Barbers Elbi')</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body class="bg-white text-zinc-900 antialiased">
+<body class="bg-brand-cream text-brand-ink antialiased">
+    <a href="#main-content" class="fixed left-4 top-4 z-[100] -translate-y-24 rounded-full bg-brand-ink px-5 py-3 text-sm font-bold text-white transition-transform focus:translate-y-0">
+        Skip to content
+    </a>
     @yield('content')
 </body>
 </html>
