@@ -6,20 +6,7 @@
     <x-navbar />
 
     <main id="main-content">
-        <section id="home" class="mx-auto grid max-w-6xl gap-8 px-6 py-16 md:grid-cols-2 md:items-center">
-            <div>
-                <p class="mb-3 text-sm uppercase">NIK NOOK Barbers Elbi</p>
-                <h1 class="text-4xl font-bold">A sharper look starts in your neighborhood.</h1>
-                <p class="mt-5 max-w-xl text-zinc-600">A basic landing-page prototype for a local Los Baños barbershop, with service information and a simple path to booking.</p>
-                <div class="mt-7 flex flex-wrap gap-3">
-                    <a href="#pricing" class="border border-zinc-900 px-4 py-3">View services</a>
-                    <a href="#contact" class="border border-zinc-400 px-4 py-3">Contact the shop</a>
-                </div>
-            </div>
-            <div class="flex min-h-72 items-center justify-center border border-dashed border-zinc-500 bg-zinc-100 p-8 text-center text-zinc-500">
-                Product illustration or barbershop photo
-            </div>
-        </section>
+        <x-hero />
 
         <section id="features" class="border-y border-zinc-300 bg-zinc-50 py-16">
             <div class="mx-auto max-w-6xl px-6">
