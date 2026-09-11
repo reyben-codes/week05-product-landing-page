@@ -67,19 +67,7 @@
             </div>
         </section>
 
-        <section class="mx-auto max-w-6xl px-6 py-16">
-            <p class="text-sm uppercase">Product showcase</p>
-            <h2 class="mt-2 text-3xl font-bold">Preview the booking journey</h2>
-            <div class="mt-8 grid gap-5 lg:grid-cols-3">
-                <div class="flex min-h-64 items-center justify-center border border-dashed border-zinc-500 bg-zinc-100 p-6 text-center text-zinc-500 lg:col-span-2">Desktop dashboard / booking preview</div>
-                <div class="flex min-h-64 items-center justify-center border border-dashed border-zinc-500 bg-zinc-100 p-6 text-center text-zinc-500">Mobile view</div>
-            </div>
-            <ul class="mt-6 grid gap-3 text-sm sm:grid-cols-3">
-                <li class="border border-zinc-300 p-4">Clear service choices</li>
-                <li class="border border-zinc-300 p-4">Mobile-friendly contact flow</li>
-                <li class="border border-zinc-300 p-4">Fast access to shop details</li>
-            </ul>
-        </section>
+        <x-product-showcase />
 
         <section id="pricing" class="border-y border-zinc-300 bg-zinc-50 py-16">
             <div class="mx-auto max-w-6xl px-6">
