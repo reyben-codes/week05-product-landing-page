@@ -114,7 +114,7 @@ week05-product-landing-page/
 
 | Initial wireframe | Final design |
 | --- | --- |
-| ![Initial low-fidelity landing-page wireframe](documentation/screenshots/before-design.png) | ![Final NIK NOOK landing-page design](documentation/screenshots/after-design.png) |
+| [![Initial low-fidelity landing-page wireframe](documentation/screenshots/before-design.png)](documentation/screenshots/before-design.png) | [![Final NIK NOOK full landing-page design](documentation/screenshots/after-design.png)](documentation/screenshots/after-design.png) |
 
 The before image is a low-fidelity wireframe created for this project from the business information available online. It is not presented as an earlier website owned by NIK NOOK. See the full [design comparison](documentation/design-comparison.md).
 

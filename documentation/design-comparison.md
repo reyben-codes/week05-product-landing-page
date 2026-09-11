@@ -8,7 +8,7 @@ The **after design** transforms that starting structure into a polished, respons
 
 | Before: initial wireframe | After: final responsive design |
 | --- | --- |
-| ![Initial low-fidelity wireframe](screenshots/before-design.png) | ![Final responsive landing page](screenshots/after-design.png) |
+| [![Initial low-fidelity wireframe](screenshots/before-design.png)](screenshots/before-design.png) | [![Final full responsive landing page](screenshots/after-design.png)](screenshots/after-design.png) |
 
 ## Design Improvements
 
