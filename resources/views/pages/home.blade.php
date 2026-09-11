@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'NIK NOOK Barbers Elbi | Landing Page Prototype')
+@section('title', 'NIK NOOK Barbers Elbi | Fresh Cuts in Los Baños')
 
 @section('content')
     <x-navbar />
@@ -89,39 +89,8 @@
             </div>
         </section>
 
-        <section id="contact" class="border-y border-zinc-300 bg-zinc-100 py-16 text-center">
-            <div class="mx-auto max-w-3xl px-6">
-                <h2 class="text-3xl font-bold">Ready for your next cut?</h2>
-                <p class="mt-4 text-zinc-600">Register your interest, contact the shop, or begin a booking inquiry through its Facebook page.</p>
-                <div class="mt-7 flex flex-wrap justify-center gap-3">
-                    <a href="#" class="border border-zinc-900 px-4 py-3">Register</a>
-                    <a href="#" class="border border-zinc-900 px-4 py-3">Contact shop</a>
-                    <a href="#" class="border border-zinc-900 px-4 py-3">Start inquiry</a>
-                </div>
-            </div>
-        </section>
+        <x-cta-section />
     </main>
 
-    <footer class="px-6 py-12">
-        <div class="mx-auto grid max-w-6xl gap-8 md:grid-cols-4">
-            <div>
-                <p class="font-bold">NIK NOOK Barbers Elbi</p>
-                <p class="mt-2 text-sm text-zinc-600">A local barbershop in Los Baños.</p>
-            </div>
-            <div>
-                <p class="font-bold">Quick links</p>
-                <a href="#features" class="mt-2 block text-sm">Features</a>
-                <a href="#pricing" class="mt-2 block text-sm">Pricing</a>
-            </div>
-            <div>
-                <p class="font-bold">Social</p>
-                <a href="https://www.facebook.com/profile.php?id=100063595255719" class="mt-2 block text-sm">Facebook</a>
-            </div>
-            <div>
-                <p class="font-bold">Contact</p>
-                <p class="mt-2 text-sm text-zinc-600">Los Baños, Laguna</p>
-            </div>
-        </div>
-        <p class="mx-auto mt-10 max-w-6xl border-t border-zinc-300 pt-5 text-sm text-zinc-500">© {{ date('Y') }} NIK NOOK Barbers Elbi. Student project prototype.</p>
-    </footer>
+    <x-footer />
 @endsection
