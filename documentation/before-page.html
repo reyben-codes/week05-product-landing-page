@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NIK NOOK Barbers Elbi — Initial Concept</title>
+    <style>
+        :root {
+            --teal: #35b9c2;
+            --teal-dark: #147b82;
+            --ink: #1d292b;
+            --cream: #f5f2e9;
+            --paper: #fffdfa;
+            --line: #d9dedc;
+            --muted: #667174;
+        }
+
+        * { box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            margin: 0;
+            background: var(--paper);
+            color: var(--ink);
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+        }
+        a { color: inherit; text-decoration: none; }
+        .container { width: min(1120px, calc(100% - 48px)); margin: 0 auto; }
+
+        header {
+            border-bottom: 1px solid var(--line);
+            background: white;
+        }
+        nav {
+            min-height: 74px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+        }
+        .brand { display: flex; align-items: center; gap: 12px; font-weight: 800; }
+        .brand img { width: 44px; height: 44px; border-radius: 50%; border: 2px solid var(--ink); }
+        .brand small { display: block; color: var(--teal-dark); letter-spacing: 2px; font-size: 9px; }
+        .nav-links { display: flex; gap: 24px; font-size: 14px; color: #475255; }
+        .nav-action { background: var(--ink); color: white; padding: 10px 18px; border-radius: 6px; font-weight: 700; }
+
+        .hero { background: #e8f7f6; padding: 80px 0; }
+        .hero-grid { display: grid; grid-template-columns: 1.05fr .95fr; align-items: center; gap: 64px; }
+        .eyebrow { color: var(--teal-dark); font-size: 12px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; }
+        h1 { max-width: 620px; margin: 14px 0 18px; font-size: clamp(44px, 6vw, 70px); line-height: 1.05; letter-spacing: -3px; }
+        .lead { max-width: 590px; color: var(--muted); font-size: 18px; }
+        .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+        .button { padding: 12px 20px; border-radius: 6px; border: 1px solid var(--ink); font-size: 14px; font-weight: 700; }
+        .button.primary { background: var(--teal); border-color: var(--teal); }
+        .visual-card { background: white; border: 1px solid #c9dddc; border-radius: 14px; padding: 34px; box-shadow: 0 15px 30px rgba(29, 41, 43, .09); text-align: center; }
+        .visual-card img { width: 150px; height: 150px; border-radius: 50%; border: 5px solid #dff4f3; }
+        .visual-card h2 { margin: 20px 0 4px; font-size: 26px; }
+        .visual-card p { margin: 0; color: var(--muted); }
+
+        section { padding: 74px 0; }
+        .section-heading { display: flex; justify-content: space-between; align-items: end; gap: 32px; margin-bottom: 36px; }
+        .section-heading h2 { margin: 8px 0 0; font-size: 38px; line-height: 1.15; letter-spacing: -1.5px; }
+        .section-heading > p { max-width: 440px; margin: 0; color: var(--muted); }
+        .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+        .card { border: 1px solid var(--line); background: white; border-radius: 10px; padding: 25px; }
+        .icon { display: grid; place-items: center; width: 42px; height: 42px; border-radius: 8px; background: #dff4f3; color: var(--teal-dark); font-weight: 900; }
+        .card h3 { margin: 18px 0 7px; font-size: 18px; }
+        .card p { margin: 0; color: var(--muted); font-size: 14px; }
+
+        .showcase { background: var(--cream); }
+        .showcase-grid { display: grid; grid-template-columns: 1.4fr .6fr; gap: 20px; }
+        .browser, .phone { border: 1px solid #bfc8c7; background: white; border-radius: 12px; overflow: hidden; }
+        .browser-bar { height: 38px; background: #e5e9e8; display: flex; align-items: center; gap: 6px; padding: 0 14px; }
+        .dot { width: 9px; height: 9px; border-radius: 50%; background: #8a9697; }
+        .dashboard { display: grid; grid-template-columns: 150px 1fr; min-height: 330px; }
+        .sidebar { padding: 24px 18px; background: #f4f6f5; color: var(--muted); font-size: 13px; }
+        .sidebar strong, .sidebar span { display: block; margin-bottom: 22px; }
+        .workspace { padding: 28px; }
+        .workspace h3 { margin: 0 0 20px; font-size: 25px; }
+        .service-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+        .service { border: 1px solid var(--line); border-radius: 8px; padding: 18px 12px; font-size: 13px; font-weight: 700; }
+        .service:first-child { border-color: var(--teal); background: #ebf9f8; }
+        .message-box { margin-top: 18px; background: var(--ink); color: white; border-radius: 8px; padding: 22px; }
+        .phone { padding: 18px; background: var(--teal); }
+        .phone-screen { min-height: 350px; background: white; border-radius: 8px; padding: 24px 18px; }
+        .phone-screen h3 { font-size: 25px; line-height: 1.1; margin: 10px 0 24px; }
+        .phone-option { margin-top: 10px; border: 1px solid var(--line); border-radius: 6px; padding: 13px; font-size: 13px; font-weight: 700; }
+
+        .pricing { background: #edf4f3; }
+        .price-card { display: flex; flex-direction: column; }
+        .price-card.featured { border: 2px solid var(--teal); }
+        .price { margin: 20px 0; font-size: 22px; font-weight: 800; }
+        .list { padding: 0; margin: 0 0 24px; list-style: none; color: var(--muted); font-size: 14px; }
+        .list li { margin: 9px 0; }
+        .list li::before { content: "✓"; margin-right: 9px; color: var(--teal-dark); font-weight: 900; }
+        .price-card .button { margin-top: auto; text-align: center; }
+
+        .review-top { display: flex; align-items: center; gap: 12px; }
+        .initials { display: grid; place-items: center; width: 48px; height: 48px; border-radius: 50%; background: var(--teal); font-weight: 800; }
+        .review-top h3 { margin: 0; }
+        blockquote { margin: 22px 0 0; color: var(--muted); font-size: 14px; }
+
+        .cta { padding: 62px 0; background: var(--ink); color: white; text-align: center; }
+        .cta h2 { margin: 0; font-size: 38px; }
+        .cta p { color: #bdc7c7; }
+        .cta .button { display: inline-block; margin-top: 12px; background: var(--teal); border-color: var(--teal); color: var(--ink); }
+        footer { padding: 35px 0; background: #142023; color: #aebabb; font-size: 13px; }
+        .footer-row { display: flex; justify-content: space-between; align-items: center; gap: 24px; }
+
+        @media (max-width: 800px) {
+            .container { width: min(100% - 32px, 620px); }
+            .nav-links { display: none; }
+            .hero { padding: 56px 0; }
+            .hero-grid, .showcase-grid { grid-template-columns: 1fr; }
+            .hero-grid { gap: 38px; }
+            h1 { font-size: 48px; }
+            .section-heading { display: block; }
+            .section-heading > p { margin-top: 15px; }
+            .grid { grid-template-columns: 1fr; }
+            .dashboard { grid-template-columns: 110px 1fr; }
+            .service-row { grid-template-columns: 1fr; }
+            .footer-row { align-items: flex-start; flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container" aria-label="Main navigation">
+            <a class="brand" href="#home">
+                <img src="../public/images/nik-nook-logo.jpg" alt="">
+                <span>NIK NOOK <small>Barbers Elbi</small></span>
+            </a>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#features">Features</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#testimonials">Testimonials</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <a class="nav-action" href="#contact">Get Started</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="container hero-grid">
+                <div>
+                    <p class="eyebrow">Initial landing page concept</p>
+                    <h1>Fresh cuts made for the Elbi community.</h1>
+                    <p class="lead">Explore haircut options, learn what customers value, and connect with NIK NOOK Barbers Elbi for your next visit.</p>
+                    <div class="actions">
+                        <a class="button primary" href="#pricing">View services</a>
+                        <a class="button" href="#contact">Contact the shop</a>
+                    </div>
+                </div>
+                <div class="visual-card">
+                    <img src="../public/images/nik-nook-logo.jpg" alt="NIK NOOK illustrated logo">
+                    <h2>Your neighborhood barber</h2>
+                    <p>Simple inquiries. Clean results.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="features">
+            <div class="container">
+                <div class="section-heading">
+                    <div><p class="eyebrow">Shop experience</p><h2>What customers can expect</h2></div>
+                    <p>A straightforward barber experience built around communication, references, and careful finishing.</p>
+                </div>
+                <div class="grid">
+                    <article class="card"><span class="icon">01</span><h3>Style consultation</h3><p>Discuss the length, shape, and finish before the haircut starts.</p></article>
+                    <article class="card"><span class="icon">02</span><h3>Clean cuts</h3><p>Choose a familiar everyday cut or a more detailed direction.</p></article>
+                    <article class="card"><span class="icon">03</span><h3>Careful finishing</h3><p>Complete the look with clean edges and finishing touches.</p></article>
+                    <article class="card"><span class="icon">04</span><h3>Reference-friendly</h3><p>Bring an inspiration photo to explain the look you want.</p></article>
+                    <article class="card"><span class="icon">05</span><h3>Direct inquiries</h3><p>Message the shop through its official Facebook page.</p></article>
+                    <article class="card"><span class="icon">06</span><h3>Local convenience</h3><p>A neighborhood barbershop serving the Los Baños community.</p></article>
+                </div>
+            </div>
+        </section>
+
+        <section class="showcase">
+            <div class="container">
+                <div class="section-heading">
+                    <div><p class="eyebrow">Service preview</p><h2>A simpler way to plan your cut</h2></div>
+                    <p>Review a few service directions before continuing the conversation with the shop.</p>
+                </div>
+                <div class="showcase-grid">
+                    <div class="browser">
+                        <div class="browser-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+                        <div class="dashboard">
+                            <aside class="sidebar"><strong>NIK NOOK</strong><span>Discover</span><span>Services</span><span>Visit</span></aside>
+                            <div class="workspace"><p class="eyebrow">Style finder</p><h3>Choose a starting point</h3><div class="service-row"><div class="service">Classic cut</div><div class="service">Fade & detail</div><div class="service">Style refresh</div></div><div class="message-box"><strong>Have a reference?</strong><br><small>Send it when you message the shop.</small></div></div>
+                        </div>
+                    </div>
+                    <div class="phone"><div class="phone-screen"><p class="eyebrow">Mobile preview</p><h3>Pick a direction.</h3><div class="phone-option">Classic cut →</div><div class="phone-option">Fade & detail →</div><div class="phone-option">Bring a reference →</div></div></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="pricing" id="pricing">
+            <div class="container">
+                <div class="section-heading">
+                    <div><p class="eyebrow">Service options</p><h2>Start with the cut you need</h2></div>
+                    <p>Contact the shop to confirm the exact service, current rate, and availability.</p>
+                </div>
+                <div class="grid">
+                    <article class="card price-card"><p class="eyebrow">Everyday reset</p><h3>Fresh Cut</h3><p class="price">Ask for current rate</p><ul class="list"><li>Style conversation</li><li>Classic haircut direction</li><li>Clean finish</li></ul><a class="button" href="#contact">Inquire</a></article>
+                    <article class="card price-card featured"><p class="eyebrow">More detail</p><h3>Cut + Detail</h3><p class="price">Ask for current rate</p><ul class="list"><li>Style conversation</li><li>Fade or haircut direction</li><li>Detail-focused finish</li></ul><a class="button primary" href="#contact">Inquire</a></article>
+                    <article class="card price-card"><p class="eyebrow">Bring an idea</p><h3>Style Refresh</h3><p class="price">Ask for current rate</p><ul class="list"><li>Reference discussion</li><li>Personalized direction</li><li>Finishing and styling</li></ul><a class="button" href="#contact">Inquire</a></article>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials">
+            <div class="container">
+                <div class="section-heading">
+                    <div><p class="eyebrow">Customer feedback</p><h2>What customers shared</h2></div>
+                    <p>Early feedback highlights the shop's value, clean results, and accommodating team.</p>
+                </div>
+                <div class="grid">
+                    <figure class="card"><div class="review-top"><span class="initials">EC</span><div><h3>Edralin Canape</h3><small>Customer</small></div></div><blockquote>“Mabilis and maayos mag pa appointment ng haircut. Super sulit nang haircut for their rate.”</blockquote></figure>
+                    <figure class="card"><div class="review-top"><span class="initials">KB</span><div><h3>Kenn Buena</h3><small>Customer</small></div></div><blockquote>“Very affordable yung prices nila for a decent haircut. Sobrang linis din ng haircuts nila.”</blockquote></figure>
+                    <figure class="card"><div class="review-top"><span class="initials">BY</span><div><h3>Brent Ysrelle</h3><small>Customer</small></div></div><blockquote>“Sobrang bait ng mga staff samin kahit na medyo na late kami ng konti sa pag dating for our appointment sa kanila.”</blockquote></figure>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta" id="contact">
+            <div class="container"><h2>Ready for your next cut?</h2><p>Message NIK NOOK to ask about services and availability.</p><a class="button" href="https://www.facebook.com/profile.php?id=100063595255719">Visit Facebook page</a></div>
+        </section>
+    </main>
+
+    <footer><div class="container footer-row"><strong>NIK NOOK Barbers Elbi</strong><span>Los Baños, Laguna</span><span>Initial landing-page concept</span></div></footer>
+</body>
+</html>

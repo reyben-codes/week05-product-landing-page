@@ -90,7 +90,9 @@ Prices and availability are intentionally not invented. Visitors are asked to co
 week05-product-landing-page/
 ├── documentation/
 │   ├── design-comparison.md
+│   ├── before-page.html
 │   ├── before-design.png
+│   ├── before-wireframe-original.png
 │   └── screenshots/
 ├── public/
 │   └── images/
@@ -112,11 +114,11 @@ week05-product-landing-page/
 
 ### Before and After
 
-| Initial wireframe | Final design |
+| Initial concept | Final design |
 | --- | --- |
-| [![Initial low-fidelity landing-page wireframe](documentation/screenshots/before-design.png)](documentation/screenshots/before-design.png) | [![Final NIK NOOK full landing-page design](documentation/screenshots/after-design.png)](documentation/screenshots/after-design.png) |
+| [![Initial medium-fidelity landing-page concept](documentation/screenshots/before-design.png)](documentation/screenshots/before-design.png) | [![Final NIK NOOK full landing-page design](documentation/screenshots/after-design.png)](documentation/screenshots/after-design.png) |
 
-The before image is a low-fidelity wireframe created for this project from the business information available online. It is not presented as an earlier website owned by NIK NOOK. See the full [design comparison](documentation/design-comparison.md).
+The before image is a medium-fidelity concept developed from the project's [original low-fidelity wireframe](documentation/before-wireframe-original.png). Neither is presented as an earlier website owned by NIK NOOK. See the full [design comparison](documentation/design-comparison.md).
 
 ### Responsive Views
 
