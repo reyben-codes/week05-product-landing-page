@@ -71,23 +71,7 @@
 
         <x-pricing-section />
 
-        <section id="testimonials" class="mx-auto max-w-6xl px-6 py-16">
-            <p class="text-sm uppercase">Testimonials</p>
-            <h2 class="mt-2 text-3xl font-bold">Customer story placeholders</h2>
-            <p class="mt-3 text-zinc-600">These cards demonstrate the required layout and do not represent published customer reviews.</p>
-            <div class="mt-8 grid gap-5 md:grid-cols-3">
-                @foreach (['Customer One', 'Customer Two', 'Customer Three'] as $customer)
-                    <figure class="border border-zinc-300 p-6">
-                        <div class="mb-4 flex size-12 items-center justify-center rounded-full bg-zinc-200">Photo</div>
-                        <blockquote class="text-zinc-600">“Sample review content will appear here after the business provides permission and verified feedback.”</blockquote>
-                        <figcaption class="mt-5">
-                            <p class="font-bold">{{ $customer }}</p>
-                            <p class="text-sm text-zinc-500">Sample customer</p>
-                        </figcaption>
-                    </figure>
-                @endforeach
-            </div>
-        </section>
+        <x-testimonials-section />
 
         <x-cta-section />
     </main>
